@@ -2,10 +2,7 @@ version: '3'
 
 services:
   nuxt:
-    build:
-      context: ./
-      dockerfile: ./project/Dockerfile
-    working_dir: /app/project
+    build: .
     tty: true
     command: yarn run dev
     volumes:
