@@ -7,7 +7,7 @@ services:
       dockerfile: ./project/Dockerfile
     working_dir: /app/project
     tty: true
-    command: npm run dev
+    command: yarn run dev
     volumes:
       - .:/app
     ports:
