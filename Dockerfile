@@ -1,4 +1,4 @@
-FROM alpine
+FROM node:10.19-alpine
 
 WORKDIR /app
 
@@ -7,10 +7,7 @@ RUN apk update && \
     apk add --update nodejs npm && \
     apk add -f nodejs - && \
     npm install -g npm && \
-    npm install -g vue-cli \
-    npm install -g yarn
-
-RUN yarn install
+    npm install -g vue-cli
 
 COPY . /app
 
