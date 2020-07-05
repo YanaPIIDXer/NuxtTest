@@ -1,9 +1,11 @@
-FROM node:10.14.1-alpine
+FROM alpine
 
 WORKDIR /app
 
 RUN apk update && \
     apk add git && \
+    apk add --update nodejs npm && \
+    apk add -f nodejs - && \
     npm install -g npm && \
     npm install -g vue-cli
 
