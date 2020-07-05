@@ -2,7 +2,10 @@ version: '3'
 
 services:
   nuxt:
-    build: .
+    build:
+      context: ./
+      dockerfile: ./project/Dockerfile
+    working_dir: /app/project
     tty: true
     command: npm run dev
     volumes:
