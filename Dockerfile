@@ -1,6 +1,6 @@
 FROM alpine
 
-WORKDIR /app
+WORKDIR /app/project
 
 RUN apk update && \
     apk add git && \
