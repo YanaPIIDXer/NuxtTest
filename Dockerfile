@@ -8,7 +8,10 @@ RUN apk update && \
     apk add -f nodejs - && \
     npm install -g npm && \
     npm install -g vue-cli \
-    npm install -g create-nuxt-app
+    npm install -g create-nuxt-app \
+    npm install -g yarn
+
+RUN yarn install
 
 COPY . /app
 
