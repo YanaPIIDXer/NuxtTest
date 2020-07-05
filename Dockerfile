@@ -10,5 +10,7 @@ RUN apk update && \
     npm install -g vue-cli \
     npm install -g create-nuxt-app
 
+COPY . /app
+
 ENV HOST 0.0.0.0
-EXPOSE 8080
+EXPOSE 3000
