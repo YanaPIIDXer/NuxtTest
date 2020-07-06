@@ -12,12 +12,23 @@
 <script>
 export default
 {
+    props:
+    {
+        user: String,
+        repository: String,
+    },
     data()
     {
+        var url = "https://github.com/";
+        if(this.user != undefined && this.repository != undefined)
+        {
+            url += this.user + "/";
+            url += this.repository;
+        }
         return {
             DisplayText: "GitHub",
-            Link: "https://github.com/nuxt/nuxt.js"
+            Link: url
         }
-    }
+    },
 }
 </script>

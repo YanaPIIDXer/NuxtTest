@@ -14,7 +14,10 @@
         >
           Documentation
         </a>
-        <github-link />
+        <github-link
+          user="nuxt"
+          repository="nuxt.js"
+        />
       </div>
     </div>
   </div>
