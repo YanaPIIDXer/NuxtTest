@@ -1,14 +1,29 @@
 <template>
     <div class="repo-list">
-        <div>Repo1</div>
-        <div>Repo2</div>
-        <div>Repo3</div>
+        <div v-for="repo in repos" :key="repo">
+            <github-link user="YanaPIIDXer" :repository="repo" :displayText="repo" />
+        </div>
     </div>
 </template>
 
 <script>
+import GithubLink from "~/components/GithubLink.vue";
+
 export default
 {
+    data()
+    {
+        return {
+            repos:
+            [
+                "YanaPServer",
+                "AnpanMMO",
+                "NuxtTest",
+                "GameLib",
+                "jQueryExtension"
+            ]
+        }
+    }
 }
 </script>
 
