@@ -4,19 +4,20 @@
       <h1 class="title">
         リポジトリリスト
       </h1>
+      <github-repos />
       <nuxt-link to="/">トップページ</nuxt-link><br />
     </div>
   </div>
 </template>
 
 <script>
-import GithubLink from '~/components/GithubLink.vue';
+import GithubRepos from '~/components/GithubRepos.vue';
   
 export default
 {
   components:
   {
-    GithubLink
+    GithubRepos
   }
 }
 </script>
