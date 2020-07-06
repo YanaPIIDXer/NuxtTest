@@ -1,5 +1,9 @@
 
 export default {
+  // 使用状況の匿名データ収集を許可するか？
+  // 初回起動時に確認ダイアログが出てdocker-compose upを使った起動の障害になっているので
+  // ここで拒否しておく。
+  telemetry: false,
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
