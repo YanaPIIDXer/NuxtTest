@@ -16,6 +16,11 @@ export default
     {
         user: String,
         repository: String,
+        displayText:
+        {
+            type: String,
+            default: "Github"
+        }
     },
     data()
     {
@@ -26,7 +31,6 @@ export default
             url += this.repository;
         }
         return {
-            displayText: "GitHub",
             link: url
         }
     },
