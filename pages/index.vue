@@ -15,8 +15,8 @@
           Documentation
         </a>
         <github-link
-          user="nuxt"
-          repository="nuxt.js"
+          user="YanaPIIDXer"
+          repository="NuxtTest"
         />
       </div>
     </div>
