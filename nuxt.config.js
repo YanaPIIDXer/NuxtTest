@@ -4,6 +4,13 @@ export default {
   // 初回起動時に確認ダイアログが出てdocker-compose upを使った起動の障害になっているので
   // ここで拒否しておく。
   telemetry: false,
+
+  // ホットリロードを有効化。
+  watchers: {
+    webpack: {
+      poll: true,
+    },
+  },
   /*
   ** Nuxt rendering mode
   ** See https://nuxtjs.org/api/configuration-mode
