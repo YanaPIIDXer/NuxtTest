@@ -1,26 +1,10 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
       <h1 class="title">
-        NuxtTest
+        リポジトリリスト
       </h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <github-link
-          user="YanaPIIDXer"
-          repository="NuxtTest"
-        />
-      </div>
-      <br />
-      <nuxt-link to="/repo-list">リポジトリリスト</nuxt-link><br />
+      <nuxt-link to="/">トップページ</nuxt-link><br />
     </div>
   </div>
 </template>
