@@ -1,15 +1,17 @@
-FROM node:10.19-alpine
+FROM node:11.13.0-alpine
 
+RUN mkdir /app
 WORKDIR /app
 
 RUN apk update && \
-    apk add git && \
-    apk add --update nodejs npm && \
-    apk add -f nodejs - && \
+    apk upgrade && \
     npm install -g npm && \
-    npm install -g vue-cli
+    npm install -g @vue/cli && \
+    npm install -g nuxt
 
 COPY . /app
+
+RUN npm install
 
 ENV HOST 0.0.0.0
 EXPOSE 3000
