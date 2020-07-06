@@ -14,21 +14,25 @@
         >
           Documentation
         </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+        <github-link
+          user="YanaPIIDXer"
+          repository="NuxtTest"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import GithubLink from '~/components/GithubLink.vue';
+  
+export default
+{
+  components:
+  {
+    GithubLink
+  }
+}
 </script>
 
 <style>
