@@ -1,5 +1,5 @@
 # Issue
-close #0
+Close #0
 
 # 概要
 {ここに概要を記載。}
