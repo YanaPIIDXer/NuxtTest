@@ -1,11 +1,11 @@
 <template>
     <a
-        :href=Link
+        :href=link
         target="_blank"
         rel="noopener noreferrer"
         class="button--grey"
     >
-        {{DisplayText}}
+        {{displayText}}
     </a>
 </template>
 
@@ -26,8 +26,8 @@ export default
             url += this.repository;
         }
         return {
-            DisplayText: "GitHub",
-            Link: url
+            displayText: "GitHub",
+            link: url
         }
     },
 }
