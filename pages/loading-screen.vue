@@ -16,17 +16,34 @@
 <script>
 export default
 {
+    created()
+    {
+        this.beginLoad();
+    },
+    
     methods:
     {
         beginLoad: function()
         {
-            alert("Load Start.");
+            // ↓created等、サーバ上でも実行されるメソッドを叩くとサーバ上でエラーになる。
+            //  （サーバ上にalertなんて無いので当然。windowとかのオブジェクトへのアクセス然り。）
+            //alert("Load Start.");
+
+            // ↓クライアント側の処理の場合はprocess.browserがtrueになるのでここで判断する事。
+            if(process.browser)
+            {
+                alert("Load Start.");
+            }
             setTimeout(this.onLoaded, 3000);
         },
 
         onLoaded: function()
         {
-            alert("Load Finished.");
+            //alert("Load Finished.");
+            if(process.browser)
+            {
+                alert("Load Finished.");
+            }
         },
     },
 }
