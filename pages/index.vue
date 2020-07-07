@@ -20,6 +20,15 @@
         />
       </div>
       <br />
+      <table border=1>
+        <caption>プラクティス集</caption>
+        <tr>
+          <th>リンク</th><th>概要</th>
+        </tr>
+        <tr>
+          <td><nuxt-link to="/simple-count">単純カウント</nuxt-link></td><td>単純な数値のカウント</td>
+        </tr>
+      </table><br />
       <nuxt-link to="/repo-list">リポジトリリスト</nuxt-link><br />
     </div>
   </div>
