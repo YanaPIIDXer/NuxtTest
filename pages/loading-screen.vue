@@ -11,7 +11,7 @@
           <div v-else>
               ロード中
           </div>
-          <button v-on:click="beginLoad">再読み込み</button>
+          <button v-on:click="beginLoad" v-bind:disabled="isLoading">再読み込み</button>
       </div>
       <nuxt-link to="/">トップページ</nuxt-link><br />
     </div>
