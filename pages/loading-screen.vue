@@ -18,6 +18,7 @@ export default
 {
     created()
     {
+        this.isLoading = false;
         this.beginLoad();
     },
     
@@ -25,6 +26,7 @@ export default
     {
         beginLoad: function()
         {
+            if(this.isLoading) { return; }
             // ↓created等、サーバ上でも実行されるメソッドを叩くとサーバ上でエラーになる。
             //  （サーバ上にalertなんて無いので当然。windowとかのオブジェクトへのアクセス然り。）
             //alert("Load Start.");
@@ -34,6 +36,7 @@ export default
             {
                 alert("Load Start.");
             }
+            this.isLoading = true;
             setTimeout(this.onLoaded, 3000);
         },
 
@@ -44,6 +47,7 @@ export default
             {
                 alert("Load Finished.");
             }
+            this.isLoading = false;
         },
     },
 }
