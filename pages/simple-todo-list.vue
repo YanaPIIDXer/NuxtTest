@@ -14,7 +14,7 @@
                       <td>{{ item.text }}</td>
                   </tr>
               </table>
-              <button style="margin-top: 10px; margin-bottom: 30px;">削除</button>
+              <button v-on:click="onDelete" style="margin-top: 10px; margin-bottom: 30px;">削除</button>
           </div>
           <div v-else>
               項目を追加して下さい。
@@ -58,6 +58,17 @@ export default
             this.items.push({text: this.inputText, preDelete: false});
             this.inputText = "";
             this.hasError = false;
+        },
+
+        onDelete: function()
+        {
+            for(var i = this.items.length -1; i >=0; i--)
+            {
+                if(this.items[i].preDelete)
+                {
+                    this.items.splice(i, 1);
+                }
+            }
         },
     },
 }
