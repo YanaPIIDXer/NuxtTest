@@ -27,7 +27,7 @@ export default
     {
         increment: function()
         {
-            alert("increment")
+            this.count++;
         }
     }
 }
