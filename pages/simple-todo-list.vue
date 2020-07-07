@@ -18,6 +18,7 @@
           <div v-else>
               項目を追加して下さい。
           </div>
+          <div v-if="hasError" style="color:#FF0000; size=24px">エラー</div>
           <input type="text" v-model="inputText" v-on:input="onInput" placeholder="TODO項目を入力"><br />
           <button v-on:click="onSend">送信</button>
       </div>
@@ -34,6 +35,7 @@ export default
         return {
             items: [],
             inputText: "",
+            hasError: false,
         }
     },
     
@@ -46,8 +48,15 @@ export default
         
         onSend: function()
         {
+            if(this.inputText === "")
+            {
+                this.hasError = true;
+                return;
+            }
+            
             this.items.push(this.inputText);
             this.inputText = "";
+            this.hasError = false;
         },
     },
 }
