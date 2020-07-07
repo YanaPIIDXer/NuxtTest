@@ -5,6 +5,8 @@
         シンプルなTODOリスト
       </h1>
       <div class="unit">
+          <input type="text" placeholder="TODO項目を入力"><br />
+          <button v-on:click="onSend">送信</button>
       </div>
       <nuxt-link to="/">トップページ</nuxt-link><br />
     </div>
@@ -14,6 +16,13 @@
 <script>
 export default
 {
+    methods:
+    {
+        onSend: function()
+        {
+            alert("onSend");
+        },
+    },
 }
 </script>
 
