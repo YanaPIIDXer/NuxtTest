@@ -7,6 +7,7 @@
       <div class="unit">
         <div>{{ count }}</div><br />
         <button v-on:click="increment">インクリメント</button><br />
+        <button v-on:click="reset">リセット</button><br />
       </div>
       <nuxt-link to="/">トップページ</nuxt-link><br />
     </div>
@@ -28,6 +29,10 @@ export default
         increment: function()
         {
             this.count++;
+        },
+        reset: function()
+        {
+            this.count = 0;
         }
     }
 }
