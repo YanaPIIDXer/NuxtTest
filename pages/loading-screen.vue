@@ -5,6 +5,8 @@
         ローディング画面
       </h1>
       <div class="unit">
+          <div>ここに何かを表示</div>
+          <button v-on:click="beginLoad">再読み込み</button>
       </div>
       <nuxt-link to="/">トップページ</nuxt-link><br />
     </div>
@@ -14,6 +16,19 @@
 <script>
 export default
 {
+    methods:
+    {
+        beginLoad: function()
+        {
+            alert("Load Start.");
+            setTimeout(this.onLoaded, 3000);
+        },
+
+        onLoaded: function()
+        {
+            alert("Load Finished.");
+        },
+    },
 }
 </script>
 
