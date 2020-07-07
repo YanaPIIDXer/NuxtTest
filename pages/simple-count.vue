@@ -6,7 +6,7 @@
       </h1>
       <div class="unit">
         <div>{{ count }}</div><br />
-        <button>インクリメント</button><br />
+        <button v-on:click="increment">インクリメント</button><br />
       </div>
       <nuxt-link to="/">トップページ</nuxt-link><br />
     </div>
@@ -20,6 +20,14 @@ export default
     {
         return {
             count: 0
+        }
+    },
+
+    methods:
+    {
+        increment: function()
+        {
+            alert("increment")
         }
     }
 }
