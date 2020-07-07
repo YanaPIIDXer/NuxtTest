@@ -27,6 +27,7 @@
         </tr>
         <tr><td><nuxt-link to="/simple-count">単純カウント</nuxt-link></td><td>単純な数値のカウント</td></tr>
         <tr><td><nuxt-link to="/loading-screen">ローディング画面</nuxt-link></td><td>ローディング画面を想定した実験</td></tr>
+        <tr><td><nuxt-link to="/simple-todo-list">シンプルTODOリスト</nuxt-link></td><td>簡単なTODOリスト</td></tr>
       </table><br />
       <nuxt-link to="/repo-list">リポジトリリスト</nuxt-link><br />
     </div>
