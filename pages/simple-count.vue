@@ -4,6 +4,10 @@
       <h1 class="title">
         単純カウント
       </h1>
+      <div class="unit">
+        <div>{{ count }}</div><br />
+        <button>インクリメント</button><br />
+      </div>
       <nuxt-link to="/">トップページ</nuxt-link><br />
     </div>
   </div>
@@ -12,6 +16,12 @@
 <script>
 export default
 {
+    data()
+    {
+        return {
+            count: 0
+        }
+    }
 }
 </script>
 
@@ -41,5 +51,9 @@ export default
   font-size: 100px;
   color: #35495e;
   letter-spacing: 1px;
+}
+
+.unit {
+    margin-bottom: 50px;
 }
 </style>
