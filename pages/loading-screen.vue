@@ -5,7 +5,12 @@
         ローディング画面
       </h1>
       <div class="unit">
-          <div>ここに何かを表示</div>
+          <div v-if="!isLoading">
+              ここに何かを表示
+          </div>
+          <div v-else>
+              ロード中
+          </div>
           <button v-on:click="beginLoad">再読み込み</button>
       </div>
       <nuxt-link to="/">トップページ</nuxt-link><br />
@@ -16,37 +21,31 @@
 <script>
 export default
 {
+    data()
+    {
+        return {
+            isLoading: false,
+        }
+    },
+    
     created()
     {
         this.isLoading = false;
         this.beginLoad();
     },
-    
+
     methods:
     {
         beginLoad: function()
         {
             if(this.isLoading) { return; }
-            // ↓created等、サーバ上でも実行されるメソッドを叩くとサーバ上でエラーになる。
-            //  （サーバ上にalertなんて無いので当然。windowとかのオブジェクトへのアクセス然り。）
-            //alert("Load Start.");
 
-            // ↓クライアント側の処理の場合はprocess.browserがtrueになるのでここで判断する事。
-            if(process.browser)
-            {
-                alert("Load Start.");
-            }
             this.isLoading = true;
             setTimeout(this.onLoaded, 3000);
         },
 
         onLoaded: function()
         {
-            //alert("Load Finished.");
-            if(process.browser)
-            {
-                alert("Load Finished.");
-            }
             this.isLoading = false;
         },
     },
