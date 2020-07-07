@@ -6,7 +6,7 @@
       </h1>
       <div class="unit">
           <div v-if="items.length > 0">
-              <table border=1>
+              <table border=1 style="width:80%; margin-left:10%;">
                   <caption>項目リスト</caption>
                   <tr><th>削除</th><th>項目</th></tr>
                   <tr v-for="item in items" :key="item">
@@ -18,7 +18,7 @@
           <div v-else>
               項目を追加して下さい。
           </div>
-          <input type="text" placeholder="TODO項目を入力"><br />
+          <input type="text" v-model="inputText" v-on:input="onInput" placeholder="TODO項目を入力"><br />
           <button v-on:click="onSend">送信</button>
       </div>
       <nuxt-link to="/">トップページ</nuxt-link><br />
@@ -32,15 +32,22 @@ export default
     data()
     {
         return {
-            items: []
+            items: [],
+            inputText: "",
         }
     },
     
     methods:
     {
+        onInput: function(event)
+        {
+            this.inputText = event.target.value;
+        },
+        
         onSend: function()
         {
-            this.items.push("TestData" + (this.items.length + 1));
+            this.items.push(this.inputText);
+            this.inputText = "";
         },
     },
 }
