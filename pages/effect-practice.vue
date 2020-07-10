@@ -5,6 +5,7 @@
         エフェクト
       </h1>
       <div class="unit">
+          <div class="effect_target">こいつにエフェクトをかける</div>
       </div>
       <nuxt-link to="/">トップページ</nuxt-link><br />
     </div>
@@ -47,5 +48,10 @@ export default
 
 .unit {
     margin-bottom: 50px;
+}
+
+.effect_target {
+    border: 1px solid;
+    padding: 50px;
 }
 </style>
